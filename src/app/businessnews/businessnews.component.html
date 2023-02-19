@@ -1,0 +1,24 @@
+<p>businessnews works!</p>
+<div *ngFor="let n of allNews" class="business">
+    <table>
+        <tr>
+            <h2>{{n.headline}} </h2>
+        </tr>
+        <tr>
+            <td> <img src="/assets/images/{{n.image}}" alt="News Image" width="120px" height="150px"> </td>
+        </tr>
+        <tr>
+            <td> 
+                <!--<h3>{{n.category}}</h3>-->
+                <p> {{n.mainNews|myabout}} </p>
+
+
+                <br/>
+                <button value="{{n.category}}" (click)="viewNewsDetails(news.value)" #news> View Details</button>
+
+
+            </td>
+
+        </tr>
+    </table>
+    </div>
